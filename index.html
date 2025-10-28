@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-cell Hackathon Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <header id="main-header">
+        <h1>Hackathon Dashboard</h1>
+    </header>
+
+    <div id="team-count-box">
+        <span id="team-count-number">0</span>
+        <span>Teams</span>
+        <small>Click to view</small>
+    </div>
+
+    <nav id="sidebar-menu">
+        <ul>
+            <li><a href="#home" class="menu-link">Home</a></li>
+            <li><a href="#teams" class="menu-link">List of Teams & Details</a></li>
+            <li><a href="#score" class="menu-link">Live Score of All Teams</a></li>
+            <li><a href="#schedule" class="menu-link">Schedule</a></li>
+            <li><a href="#contact" class="menu-link">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div id="main-content">
+        
+        <section id="home" class="page-content active">
+            <h1>Welcome to the Hackathon!</h1>
+            
+            <div class="content-grid">
+                <div class="content-box">
+                    <h2>Announcements</h2>
+                    <div class="announcement-box">
+                        <strong>Opening Ceremony:</strong> Starts at 9:00 AM.
+                    </div>
+                    <div class="announcement-box">
+                        <strong>Submission Deadline:</strong> 10:00 AM Tomorrow.
+                    </div>
+                    <div class="announcement-box">
+                        <strong>Mentor Session:</strong> 3:00 PM today (ML Domain).
+                    </div>
+                </div>
+
+                <div class="content-box">
+                    <h2>Leaderboard</h2>
+                    <table class="mini-leaderboard">
+                        <thead>
+                            <tr>
+                                <th>Pos</th>
+                                <th>Team</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>Data Wizards</td><td>850</td></tr>
+                            <tr><td>2</td><td>Team Alpha</td><td>720</td></tr>
+                            <tr><td>3</td><td>Code Ninjas</td><td>680</td></tr>
+                            <tr><td>4</td><td>Pixel Perfect</td><td>510</td></tr>
+                            <tr><td>5</td><td>Byte Brigade</td><td>490</td></tr>
+                            <tr><td>6</td><td>AI Innovators</td><td>450</td></tr>
+                            <tr><td>7</td><td>Web Weavers</td><td>420</td></tr>
+                            <tr><td>8</td><td>Design Dynamos</td><td>380</td></tr>
+                            <tr><td>9</td><td>Cloud Creators</td><td>350</td></tr>
+                            <tr><td>10</td><td>Logic Lords</td><td>330</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="teams" class="page-content">
+            <h1>List of Teams</h1>
+            
+            
+            
+            <ul class="team-list">
+                <li><strong>Team Alpha</strong> (Domain: Web) - 4 Members</li>
+                <li><strong>Data Wizards</strong> (Domain: ML) - 3 Members</li>
+                <li><strong>Pixel Perfect</strong> (Domain: Design) - 4 Members</li>
+                <li><strong>Code Ninjas</strong> (Domain: Web) - 5 Members</li>
+                <li><strong>Byte Brigade</strong> (Domain: ML) - 3 Members</li>
+                <li><strong>AI Innovators</strong> (Domain: ML) - 4 Members</li>
+                <li><strong>Web Weavers</strong> (Domain: Web) - 4 Members</li>
+                <li><strong>Design Dynamos</strong> (Domain: Design) - 5 Members</li>
+                <li><strong>Cloud Creators</strong> (Domain: Web) - 3 Members</li>
+                <li><strong>Logic Lords</strong> (Domain: ML) - 4 Members</li>
+                <li><strong>Backend Buffs</strong> (Domain: Web) - 4 Members</li>
+                <li><strong>UI Unicorns</strong> (Domain: Design) - 3 Members</li>
+            </ul>
+        </section>
+
+        <section id="score" class="page-content">
+            <h1>Live Leaderboard</h1>
+            <p>Scores will update in real-time. (This is a static example).</p>
+            
+            <table class="leaderboard">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Team Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Data Wizards</td><td>850</td></tr>
+                    <tr><td>2</td><td>Team Alpha</td><td>720</td></tr>
+                    <tr><td>3</td><td>Code Ninjas</td><td>680</td></tr>
+                    <tr><td>4</td><td>Pixel Perfect</td><td>510</td></tr>
+                    <tr><td>5</td><td>Byte Brigade</td><td>490</td></tr>
+                    <tr><td>6</td><td>AI Innovators</td><td>450</td></tr>
+                    <tr><td>7</td><td>Web Weavers</td><td>420</td></tr>
+                    <tr><td>8</td><td>Design Dynamos</td><td>380</td></tr>
+                    <tr><td>9</td><td>Cloud Creators</td><td>350</td></tr>
+                    <tr><td>10</td><td>Logic Lords</td><td>330</td></tr>
+                    <tr><td>11</td><td>Backend Buffs</td><td>310</td></tr>
+                    <tr><td>12</td><td>UI Unicorns</td><td>290</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="schedule" class="page-content">
+            <h1>Event Schedule</h1>
+            <ul class="schedule-list">
+                <li><strong>Day 1, 9:00 AM:</strong> Opening Ceremony</li>
+                <li><strong>Day 1, 10:00 AM:</strong> Hacking Begins</li>
+                <li><strong>Day 1, 1:00 PM:</strong> Lunch Break</li>
+                <li><strong>Day 1, 6:00 PM:</strong> Mentor Check-in</li>
+                <li><strong>Day 2, 10:00 AM:</strong> Submissions Due</li>
+                <li><strong>Day 2, 11:00 AM:</strong> Judging Begins</li>
+                <li><strong>Day 2, 1:00 PM:</strong> Closing Ceremony & Winners</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="page-content">
+            <h1>Contact Us</h1>
+            <p>Contact Details Here</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> support@hackathon.com</p>
+                <p><strong>Organizer Desk:</strong> Main Hall, 1st Floor</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

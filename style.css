@@ -1,0 +1,474 @@
+/* Basic body styling*/
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    background-image: url("Background_image.png");
+    background-size: cover;          /* 2. Makes the image cover the whole screen */
+    background-position: center;     /* 3. Centers the image */
+    background-repeat: no-repeat;    /* 4. Stops the image from repeating */
+    background-attachment: fixed;    /* 5. Makes the image stay in place when you scroll */
+    margin: 0;
+    padding: 0;
+}
+
+/* Hamburger Menu Icon */
+#menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001; /* Stays on top of the menu */
+    cursor: pointer;
+}
+
+#menu-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Sidebar Menu */
+#sidebar-menu {
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    z-index: 1000; /* Stays on top of content */
+    top: 0;
+    left: 0;
+    background-color: rgba(44, 62, 80, 0.9);
+    overflow-x: hidden;
+    
+    /* Hides the menu off-screen to the left */
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease-in-out;
+}
+
+/* This class is added by JavaScript to show the menu */
+#sidebar-menu.open {
+    transform: translateX(0);
+}
+
+#sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 60px 0 0 0; /* Margin-top to clear the status bar */
+}
+
+#sidebar-menu li a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidebar-menu li a:hover {
+    color: #f1f1f1;
+    background-color: #333;
+}
+
+/* Main Content Area */
+#main-content {
+    padding: 20px;
+    /* Adds padding to the left to clear the menu icon */
+    padding-left: 80px; 
+    transition: margin-left 0.3s;
+}
+
+/* Page Content Styling */
+.page-content {
+    display: none; /* Hide all pages by default */
+}
+
+.page-content.active {
+    display: block; /* Show only the active page */
+}
+
+/* Styles for demo content (from your image) */
+.announcement-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.filters button {
+    padding: 8px 16px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #ccc;
+}
+
+.leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.leaderboard th, .leaderboard td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.leaderboard th {
+    background-color: #f2f2f2;
+} */
+
+
+
+/* Basic body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5; /* Lighter grey background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* NEW: Top-Middle Header */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 998; /* Below menu, above content */
+}
+
+#main-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #1d7ad8;
+    font-weight: 500;
+    margin: 0 50 0 50 px;
+}
+
+
+
+/* NEW: Top-Right Team Count Box */
+#team-count-box {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1002; /* On top of everything */
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Colorful gradient */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+#team-count-box:hover {
+    transform: scale(1.05);
+}
+
+#team-count-box span {
+    display: block;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+#team-count-box small {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+/* Hamburger Menu Icon */
+#menu-icon {
+    position: fixed;
+    top: 15px; /* Aligned with header */
+    left: 20px;
+    z-index: 1001; 
+    cursor: pointer;
+}
+
+#menu-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: #34495e; /* Darker icon */
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* Sidebar Menu */
+#sidebar-menu {
+    height: 100%;
+    width: 280px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #2c3e50; /* Dark blue/grey */
+    overflow-x: hidden;
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.2);
+}
+
+#sidebar-menu.open {
+    transform: translateX(0);
+}
+
+#sidebar-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 80px 0 0 0; /* Clear the header */
+}
+
+#sidebar-menu li a {
+    padding: 18px 25px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #ecf0f1; /* Light color for text */
+    display: block;
+    transition: 0.3s;
+    border-left: 4px solid transparent; /* For active state */
+}
+
+#sidebar-menu li a:hover {
+    background-color: #34495e; /* Slightly lighter blue */
+    color: #fff;
+}
+
+/* Main Content Area */
+#main-content {
+    padding: 20px;
+    /* NEW: Adjusted padding to clear header and menu icon */
+    padding-top: 80px; 
+    padding-left: 80px; 
+    transition: margin-left 0.3s;
+}
+
+/* Page Content Styling */
+.page-content {
+    display: none; 
+}
+
+.page-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.page-content h1 {
+    color: #2c3e50;
+    font-weight: 700;
+    border-bottom: 2px solid #6a11cb;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* NEW: Home page grid layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
+.content-box {
+    background: transparent;
+    /* background: rgba(255, 255, 255, 0.8); <-- CHANGED to semi-transparent white */
+    /* border-radius: 8px; */
+    padding: 20px;
+    /* box-shadow: 0 2px 5px rgba(0,0,0,0.05); */
+    opacity: 0.8;
+    color: #ffffff;
+}
+
+
+/* NEW: Top 10 Teams Table */
+.mini-leaderboard {
+    color: transparent;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.mini-leaderboard th, .mini-leaderboard td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.mini-leaderboard th{
+    background-color: rgba(129, 135, 254, 0.2);
+}
+
+.mini-leaderboard th {
+    font-weight: 500;
+    color: #555;
+}
+
+.mini-leaderboard tr:last-child td {
+    border-bottom: none;
+}
+
+.mini-leaderboard td:first-child { /* Position */
+    font-weight: 700;
+    color: #6a11cb;
+}
+
+/* Styles for demo content (from your image) */
+.announcement-box {
+    background-color: transparent;
+    border-left: 4px solid #2575fc;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 12px; 
+}
+
+.filters button {
+    padding: 10px 20px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.filters button:hover {
+    background-color: #ccc;
+}
+.filters button:focus {
+    background-color: #6a11cb;
+    color: white;
+    outline: none;
+}
+
+.leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background: transparent;
+    border-radius: 8px;
+    overflow: hidden; /* For rounded corners */
+}
+
+.leaderboard th, .leaderboard td {
+    border-bottom: 1px solid #ddd;
+    padding: 14px;
+    text-align: left;
+}
+
+.leaderboard th {
+    background-color: #f9f9f9;
+    font-weight: 700;
+}
+
+.leaderboard tr:hover {
+    background-color: #f5f5f5;
+}
+
+.schedule-list, .team-list {
+    background: transparent;
+    border-radius: 8px;
+    padding: 20px;
+    list-style-type: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.schedule-list li, .team-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.schedule-list li:last-child, .team-list li:last-child {
+    border-bottom: none;
+}
+
+.contact-info {
+    color: #f8ddb6;
+    background:transparent;
+    border-radius: 8px;
+    padding: 20px;
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+.team-list{
+    background: transparent;
+    border-radius: solid white;
+}
+.team-list li{
+    color: rgb(179, 175, 175);
+}
+.mini-leaderboard th{
+    color: rgb(180, 177, 177);
+}
+.filters button{
+    background: transparent;
+    border-radius: solid white;
+}   
+/* #home strong{
+    color: rgb(152, 212, 232);
+} */
+ .announcement-box{
+    color: rgb(160, 229, 252);
+ }
+ .content-box .mini-leaderboard{
+    color: rgb(160, 229, 252);
+ }
+ .mini-leaderboard td:first-child
+ {
+    font-weight: 700;
+    color: #dccaf0;
+}
+.mini-leaderboard th {
+    color: rgb(238 245 238);
+}
+.page-content h1 {
+    color: #c7d8e8;
+    font-weight: 700;
+    border-bottom: 2px solid #6a11cb;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.team-list li{
+    color: rgb(242, 188, 188);
+}   
+.leaderboard th {
+    background:transparent ;
+    color: white;
+}
+.leaderboard td {
+    color: rgb(249, 161, 161);
+}
+.leaderboard td:hover{
+    background-color: #ebfdc3;
+
+    color: rgb(193, 6, 6);
+}
+.schedule-list li {
+    color: rgb(243, 150, 150);
+}
+#contact p{
+    color: rgb(245, 173, 173);
+}
